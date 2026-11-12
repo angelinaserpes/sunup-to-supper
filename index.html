@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunup to Supper</title>
+<meta name="description" content="Breakfast, lunch and dinner ideas I can actually cook, with the recipes.">
+<meta name="theme-color" content="#0e0d0c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="poster" aria-hidden="true"></div>
+<canvas id="film" aria-hidden="true"></canvas>
+<div class="grade" id="grade" aria-hidden="true"></div>
+<div class="shade" aria-hidden="true"></div>
+<div class="loader" id="loader"><span id="loaderBar"></span></div>
+
+<header class="top">
+  <a class="brand" href="#top">Sunup <em>to</em> Supper</a>
+  <nav aria-label="Meals">
+    <a href="#breakfast">Breakfast</a>
+    <a href="#lunch">Lunch</a>
+    <a href="#dinner">Dinner</a>
+  </nav>
+</header>
+
+<aside class="rail" aria-hidden="true">
+  <div class="clock" id="clock">7:00 AM</div>
+  <div class="track">
+    <span class="fill" id="railFill"></span>
+    <span class="stop"><i></i><b>Breakfast</b></span>
+    <span class="stop"><i></i><b>Lunch</b></span>
+    <span class="stop"><i></i><b>Dinner</b></span>
+  </div>
+</aside>
+
+<main id="top">
+  <section class="hero">
+    <div class="depth">
+      <h1>Sunup <em>to</em><br>Supper</h1>
+      <p class="lede">Every dish I love and can actually cook, from the first coffee to the last plate. Scroll to move through the day.</p>
+      <div class="cue"><span></span>Scroll</div>
+    </div>
+  </section>
+
+  <section class="chapter" id="breakfast" data-meal="breakfast">
+    <div class="intro"><div class="depth">
+      <p class="kicker">7:00 in the morning</p>
+      <h2>Breakfast</h2>
+      <p class="sub">Low sun across the marble. Something quick before the day starts.</p>
+    </div></div>
+    <div class="panel"><div class="grid"></div></div>
+  </section>
+
+  <div class="between"><p class="depth">The city wakes up.</p></div>
+
+  <section class="chapter" id="lunch" data-meal="lunch">
+    <div class="intro"><div class="depth">
+      <p class="kicker">12:30, midday</p>
+      <h2>Lunch</h2>
+      <p class="sub">Bright, filling and done fast. Good for packing, better for leftovers.</p>
+    </div></div>
+    <div class="panel"><div class="grid"></div></div>
+  </section>
+
+  <div class="between long"><p class="depth">The lights come on.</p></div>
+
+  <section class="chapter" id="dinner" data-meal="dinner">
+    <div class="intro"><div class="depth">
+      <p class="kicker">8:00 in the evening</p>
+      <h2>Dinner</h2>
+      <p class="sub">The skyline lit up outside. The meal worth slowing down for.</p>
+    </div></div>
+    <div class="panel"><div class="grid"></div></div>
+  </section>
+
+  <footer class="end" id="end">
+    <p class="big depth">Goodnight, kitchen.</p>
+    <p class="small">Tomorrow starts at sunrise.</p>
+    <a href="#top">Back to sunrise</a>
+  </footer>
+</main>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="rName" hidden>
+  <button class="close" id="rClose" aria-label="Close recipe">&times;</button>
+  <div class="drawer-body">
+    <p class="kicker" id="rMeal"></p>
+    <h3 id="rName"></h3>
+    <p class="blurb" id="rBlurb"></p>
+    <ul class="meta" id="rMeta"></ul>
+    <h4>Ingredients</h4>
+    <ul class="ingredients" id="rIngredients"></ul>
+    <h4>Method</h4>
+    <ol class="steps" id="rSteps"></ol>
+  </div>
+</aside>
+
+<script src="dishes.js"></script>
+<script src="frames-index.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
